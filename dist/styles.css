@@ -137,6 +137,7 @@ a, a::before, a::after {
   height: 70px;
   width: 100%;
   margin: 0 auto;
+  z-index: 999;
 }
 
 .header__container.scroll {
@@ -156,10 +157,16 @@ a, a::before, a::after {
 }
 
 .header__logo > img#header-img {
-  width: 70px;
+  width: 100%;
   height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 575.98px) {
+  .header__logo > img#header-img {
+    height: 30px;
+  }
 }
 
 .header__logo > a > .header-logo-text {
@@ -182,7 +189,7 @@ a, a::before, a::after {
     width: 50vw;
     padding-top: 70px;
     background-color: #000000;
-    opacity: 0.7;
+    opacity: 0.9;
   }
   .header__navlink.show {
     left: 0;
@@ -238,20 +245,259 @@ a, a::before, a::after {
   color: #f17c0e;
 }
 
-.header__hamburger > span.hamburger-span {
+.header__hamburger {
+  position: absolute;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.header__hamburger > .hamburger-span {
+  position: relative;
   width: 33px;
   height: 3px;
   margin-bottom: 6px;
   background-color: #ffffff;
   display: block;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
-.header__hamburger > span.hamburger-span:nth-child(2) {
+.header__hamburger > .hamburger-span:nth-child(2) {
   width: 23px;
 }
 
-.header__hamburger > span.hamburger-span:nth-child(3) {
+.header__hamburger > .hamburger-span:nth-child(3) {
   width: 13px;
+}
+
+.header__hamburger > .hamburger-span.active {
+  width: 33px;
+}
+
+.header__hamburger.active span:nth-child(1) {
+  -webkit-animation: ease .7s top forwards;
+          animation: ease .7s top forwards;
+}
+
+.header__hamburger.not-active span:nth-child(1) {
+  -webkit-animation: ease .7s top-2 forwards;
+          animation: ease .7s top-2 forwards;
+}
+
+.header__hamburger.active span:nth-child(2) {
+  -webkit-animation: ease .7s scaled forwards;
+          animation: ease .7s scaled forwards;
+}
+
+.header__hamburger.not-active span:nth-child(2) {
+  -webkit-animation: ease .7s scaled-2 forwards;
+          animation: ease .7s scaled-2 forwards;
+}
+
+.header__hamburger.active span:nth-child(3) {
+  -webkit-animation: ease .7s bottom forwards;
+          animation: ease .7s bottom forwards;
+}
+
+.header__hamburger.not-active span:nth-child(3) {
+  -webkit-animation: ease .7s bottom-2 forwards;
+          animation: ease .7s bottom-2 forwards;
+}
+
+@-webkit-keyframes top {
+  0% {
+    top: 0;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    top: 8.5px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    top: 8.5px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    top: 8.5px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    top: 8.5px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes top-2 {
+  0% {
+    top: 8.5px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    top: 8.5px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    top: 8.5px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    top: 8.5px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes bottom {
+  0% {
+    bottom: 0;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    bottom: 8.5px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    bottom: 8.5px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    bottom: 8.5px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    bottom: 8.5px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
+@-webkit-keyframes bottom-2 {
+  0% {
+    bottom: 8.5px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  50% {
+    bottom: 8.5px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: 8.5px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  50% {
+    bottom: 8.5px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes scaled {
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes scaled-2 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .footer {
@@ -953,6 +1199,7 @@ a, a::before, a::after {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 95%;
   }
 }
 
@@ -1024,6 +1271,7 @@ a, a::before, a::after {
 .contact-form__form > .inputs > label > input {
   width: 100%;
   background-color: #0b0b0c;
+  color: white;
   border: none;
   border-bottom: 1px white solid;
 }
@@ -1047,6 +1295,7 @@ a, a::before, a::after {
 .contact-form__form > .inputs > label > textarea {
   width: 100%;
   background-color: #0b0b0c;
+  color: white;
   border: none;
   border-bottom: 1px white solid;
 }

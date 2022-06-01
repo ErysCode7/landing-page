@@ -11,6 +11,7 @@
 
         @include max-width(laptop) {
             flex-direction: column;
+            width: 95%;
         }
 
     }
@@ -73,6 +74,7 @@
                 >input {
                     width: 100%;
                     background-color: $color-black;
+                    color: white;
                     border: none;
                     border-bottom: 1px white solid;
 
@@ -84,6 +86,7 @@
                 >textarea {
                     width: 100%;
                     background-color: $color-black;
+                    color: white;
                     border: none;
                     border-bottom: 1px white solid;
                 }
