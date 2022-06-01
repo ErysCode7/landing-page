@@ -1,0 +1,36 @@
+.promotion {
+    margin-top: 7rem;
+    padding: 3rem 0;
+
+
+    &__container {
+        width: 80%;
+        margin: 0 auto;
+
+        >h1 {
+            font-size: 3.75rem;
+            width: 50%;
+            margin-bottom: 5rem;
+
+            @include max-width(laptop) {
+                font-size: 2.75rem;
+                margin-bottom: 0;
+            }
+        }
+
+        >.text {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: flex-end;
+
+            >p {
+                font-size: 2.25rem;
+                font-weight: bold;
+
+                >span {
+                    color: $color-orange;
+                }
+            }
+        }
+    }
+}

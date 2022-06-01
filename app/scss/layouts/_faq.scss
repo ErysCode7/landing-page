@@ -1,0 +1,68 @@
+.faq {
+    margin: 2rem 0;
+    padding: 2rem 0;
+
+    &__container {
+        width: 65%;
+        margin: 0 auto;
+
+        @include max-width(laptop) {
+            width: 90%;
+        }
+    }
+
+    &__title {
+        >h2 {
+            font-size: 3.75rem;
+
+            @include max-width(tablet) {
+                font-size: 3rem;
+            }
+        }
+
+        >p {
+            font-size: 1.125rem;
+
+            @include max-width(tablet) {
+                font-size: 1rem;
+            }
+
+            @include max-width(mobile) {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    .accordion-item {
+
+        &:last-child {
+            border-bottom: 1px solid rgba(0, 0, 0, .125);
+        }
+    }
+
+    .accordion-button {
+        background-color: $color-black;
+        font-size: 1.125rem;
+
+        @include max-width(tablet) {
+            font-size: 1rem;
+        }
+
+        @include max-width(mobile) {
+            font-size: 0.75rem;
+        }
+    }
+
+    .accordion-button.click {
+        background-color: $color-orange;
+    }
+
+    .accordion-button::after {
+        background-image: url("../assets/img/down-arrow.svg");
+    }
+
+    .accordion-body {
+        background-color: $color-black;
+        padding: 3rem;
+    }
+}

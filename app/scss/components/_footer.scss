@@ -1,0 +1,130 @@
+.footer {
+    padding: 2rem;
+    padding-bottom: 0;
+    margin-top: 2rem;
+    width: 100%;
+    background: $color-black;
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+
+        @include min-width(laptop) {
+            width: 95%;
+            margin: 0 auto;
+            position: relative;
+        }
+    }
+
+    &__flex {
+        height: 100%;
+
+        @include min-width(laptop) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 2.43rem;
+        }
+
+        >.more-topics,
+        >.shopping,
+        >.all-about-cars,
+        >.discover-more {
+            @include min-width(laptop) {
+                flex-basis: 25%;
+            }
+        }
+
+        ul {
+
+            li {
+
+                padding: 0.4rem 0;
+
+                @include min-width(laptop) {
+                    padding: 0;
+                }
+
+                a {
+                    color: #999;
+                    font-size: 0.875rem;
+                    transition: all 300ms ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $color-orange;
+                    }
+                }
+            }
+        }
+    }
+
+    &__info {
+
+        h2 {
+            color: #ffffff;
+            font-size: 2.43rem;
+        }
+
+        >.text-contents {
+
+            p {
+                color: #999;
+                font-size: 0.875rem;
+                cursor: pointer;
+                width: 100%;
+
+                @include min-width(laptop) {
+                    width: 42%;
+                }
+            }
+
+            >.social-icons {
+                margin-top: 1.5rem;
+                margin-bottom: 2.5rem;
+
+
+                a {
+                    margin-right: 1rem;
+                    width: 100%;
+
+                    @include min-width(laptop) {
+                        margin-right: 3rem;
+                        cursor: pointer;
+                    }
+                }
+
+                i {
+                    color: #999;
+                    font-size: 2rem;
+                    transition: all 300ms ease;
+
+                    &:hover {
+                        color: $color-orange;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        padding-bottom: 1rem;
+
+
+        >.footer-btm-text {
+            color: #FFFFFF;
+            text-align: center;
+        }
+    }
+
+    &__line {
+        height: 1px;
+        background: #444;
+        width: 100%;
+        margin: 1.5rem 0;
+        position: relative;
+    }
+}

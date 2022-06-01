@@ -1,0 +1,58 @@
+.company {
+    margin: 2rem 0;
+    padding: 2rem 0;
+
+    &__container {
+        gap: 5rem;
+
+        @include max-width(laptop) {
+            flex-direction: column;
+        }
+    }
+
+    &__article {
+        flex-basis: 44%;
+        margin-left: 2rem;
+
+        padding: 1rem;
+     
+        
+        > h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.125rem;
+        }
+
+        > p {
+
+           
+        }
+
+        > p.underline {
+            font-size: 1.40rem;
+            text-decoration: underline;
+        }
+
+        > p.text-highlight {
+            background-color: $color-orange;
+            padding: 1rem;
+        }
+    }
+
+    &__image {
+        flex: 1;
+
+        > img {
+            border-radius: 50%;
+            aspect-ratio: 1 / 1;
+            width: 470px;
+            height: 470px;
+            object-fit: cover;
+            object-position: center;
+
+            @include max-width(tablet) {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.insurance-investing {
+    text-align: center;
+
+    &__container {
+        padding: 5rem 0;
+      
+
+        @include max-width(laptop) {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+
+        > h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+
+            @include max-width(laptop) {
+                font-size: 1.5em
+            }    
+
+        }
+    }
+
+    &__contents {
+
+        @include max-width(laptop) {
+            flex-direction: column;
+        }
+
+        > .content {
+            flex-basis: 31%;
+            padding: 1rem 0;
+          
+
+            > img {
+                width: 70px;
+                height: 50px;
+                margin-bottom: 1rem;
+            }
+
+            > h3 {
+                margin-bottom: 1rem;
+                font-size: 1.50rem;
+            }
+
+            > p {
+                color: $color-gray;
+            }
+
+            > a {
+                width: 100%;
+               
+                
+                button {
+                    background-color: transparent;
+                    color: $color-orange;
+                    outline: none;
+                    border-color: $color-orange;
+                    border-radius: 30px;
+                    padding: 0.625rem 1.875rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    transition: background-color color 300ms ease;
+
+                    &:hover {
+                        background-color: $color-orange;
+                        color: #ffffff
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+.header {
+    width: 100%;
+    display: grid;
+    background-image: url("../assets/img/hero.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+
+
+    &__container {
+        position: fixed;
+        top: 0;
+        height: 70px;
+        width: 100%;
+        margin: 0 auto;
+
+
+
+        &.scroll {
+            background-color: $color-black;
+            border-bottom: none;
+        }
+
+        @include max-width(laptop) {
+            border: none;
+        }
+    }
+
+    &__nav {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__logo {
+
+        >img#header-img {
+            width: 70px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        >a {
+            >.header-logo-text {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    &__navlink {
+
+        @include max-width(laptop) {
+            flex-direction: column;
+            position: fixed;
+            transition: left 400ms ease;
+            height: 100vh;
+            top: 0;
+            left: -100%;
+            bottom: 0;
+            width: 50vw;
+            padding-top: 70px;
+            background-color: #000000;
+            opacity: 0.7;
+
+            &.show {
+                left: 0;
+            }
+        }
+
+        >li {
+
+            @include max-width(laptop) {
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+
+            >a.nav-link {
+                padding: 0 1rem;
+
+                @include max-width(laptop) {
+                    display: block;
+                    text-align: center;
+                    padding: 1.25rem 0;
+                }
+
+                &::after {
+                    content: "";
+                    height: 2px;
+                    width: 100%;
+                    margin: 0 auto;
+                    display: block;
+                    background-color: $color-orange;
+                    transition: transform 300ms ease;
+                    transform: scale(0, 1);
+                    transform-origin: center;
+                }
+
+                &:hover::after {
+                    transform: scale(1, 1);
+                }
+
+                &:hover {
+                    color: $color-orange;
+                }
+
+                &.active {
+                    color: $color-orange;
+                }
+            }
+        }
+    }
+
+    &__hamburger {
+
+        >span.hamburger-span {
+            width: 33px;
+            height: 3px;
+            margin-bottom: 6px;
+            background-color: #ffffff;
+            display: block;
+
+            &:nth-child(2) {
+                width: 23px;
+            }
+
+            &:nth-child(3) {
+                width: 13px;
+            }
+        }
+    }
+}

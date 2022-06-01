@@ -1,0 +1,93 @@
+.contact-form {
+    margin: 2rem 0;
+    padding: 2rem 0;
+
+    &__container {
+        width: 75%;
+        margin: 0 auto;
+        gap: 5rem;
+        padding: 2rem;
+
+
+        @include max-width(laptop) {
+            flex-direction: column;
+        }
+
+    }
+
+    &__content {
+        flex: 1;
+
+        @include max-width(laptop) {
+            flex: unset;
+        }
+
+        >h3 {
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.2;
+        }
+
+        >h2 {
+            font-weight: 700;
+            font-size: 2.25rem;
+        }
+
+        >p {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__form {
+        flex: 1;
+
+
+        @include max-width(laptop) {
+            flex: unset;
+            width: 100%;
+        }
+
+        >input.form-btn {
+            background-color: transparent;
+            color: $color-orange;
+            padding: 0.5rem 1.75rem;
+            border-radius: 30px;
+            border: 1px $color-orange solid;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: all 300ms ease;
+
+            &:hover {
+                background-color: $color-orange;
+                color: white;
+            }
+        }
+
+
+        >.inputs {
+
+            >label {
+                width: 100%;
+
+
+                >input {
+                    width: 100%;
+                    background-color: $color-black;
+                    border: none;
+                    border-bottom: 1px white solid;
+
+                    &::placeholder {
+                        color: #999999;
+                    }
+                }
+
+                >textarea {
+                    width: 100%;
+                    background-color: $color-black;
+                    border: none;
+                    border-bottom: 1px white solid;
+                }
+            }
+        }
+    }
+}

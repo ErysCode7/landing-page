@@ -1,0 +1,36 @@
+.hero {
+    min-height: calc(900px - 70px);
+    text-align: center;
+
+
+    &__container {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+
+        @include max-width(laptop) {
+            width: 80%;
+        }
+
+    }
+
+    &__contents {
+        margin-top: 12rem;
+      
+
+        > h1.hero-title {
+            font-size: 3.75rem;
+            margin-bottom: 1rem;
+
+            @include max-width(laptop) {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        > p.hero-text {
+
+            margin-bottom: 1rem;
+        }
+    }
+}

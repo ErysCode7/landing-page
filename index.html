@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royals Insurance Company</title>
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--BOOTSTRAP -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" defer></script> -->
+    <!--FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/0f45878e6a.js" crossorigin="anonymous" defer></script>
+    <!--css-->
+    <link rel="stylesheet" href="./dist/styles.css">
+    <!--GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+    <!--JavaScript-->
+    <script type="module" src="./app/js/index.js" defer></script>
+    <link rel="shortcut icon" href="./assets/img/royals.svg" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <header class="header" id="header">
+        <div class="header__container flex flex-ai-c" data-header-container>
+            <nav class="header__nav flex flex-ai-c flex-jc-sb" id="nav-bar">
+                <div class="header__logo flex flex-ai-c" id="header__image">
+                    <img id="header-img" src="./assets/img/royals.svg" alt="Royals Logo">
+                    <a class="text-white" href="./index.html">
+                        <h2 class="header-logo-text">Royals</h2>
+                    </a>
+                </div>
+                <ul class="header__navlink flex flex-ai-c" data-menu>
+                    <li><a href="" class="nav-link active">Home</a></li>
+                    <li><a href="" class="nav-link text-white">About</a></li>
+                    <li><a href="" class="nav-link text-white">Contact</a></li>
+                </ul>
+                <div class="header__hamburger hide-for-laptops-mf" data-hamburger>
+                    <span class="hamburger-span"></span>
+                    <span class="hamburger-span"></span>
+                    <span class="hamburger-span"></span>
+                </div>
+            </nav>
+        </div>
+        <section class="hero flex flex-ai-c flex-jc-c" data-hero>
+            <div class="hero__container">
+                <div class="hero__contents" data-hero-contents data-fade="hero">
+                    <h1 class="hero-title">Finding the best car insurance company for you</h1>
+                    <p class="hero-text">Pricing and discounts made up a portion of each insurer’s score, but we know
+                        that cost is the top factor for many auto insurance shoppers. Since pricing is based on personal
+                        factors including your age, location, vehicle and credit history and gender (in most cases),
+                        it’s important to shop around for car insurance quotes.</p>
+                    <p class="hero-text-bold fw-semibold">If price is the most important factor in your search,
+                        comparing car insurance quotes can help you find the cheapest rate. But your shopping experience
+                        will also shed light on a company’s customer service standards.</p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section class="insurance-investing" data-insurance-investing>
+        <div class="insurance-investing__container container" data-investing data-fade="down">
+            <div class="insurance-investing__title">
+                <h2>Insurance and investing for your many sides</h2>
+                <p>We've been protecting people, businesses and futures for more than 90 years.</p>
+            </div>
+            <div class="insurance-investing__contents flex flex-jc-sb pt-5">
+                <div class="content">
+                    <img src="./assets/img/people.svg" alt="People">
+                    <h3>For you and your family</h3>
+                    <p>We protect vehicles, property, pets and <br> events.</p>
+                    <a href=""><button type="button">Read more</button></a>
+                </div>
+                <div class="content">
+                    <img src="./assets/img/business.svg" alt="Business">
+                    <h3>For your business</h3>
+                    <p>We protect businesses and employees, as well as company property and vehicles.</p>
+                    <a href=""><button type="button">Read more</button></a>
+                </div>
+                <div class="content">
+                    <img src="./assets/img/bulb.svg" alt="Bulb">
+                    <h3>For your future</h3>
+                    <p>We protect investments, retirements and <br> financial dreams.</p>
+                    <a href=""><button type="button">Read more</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="showcase__container container" data-showcase data-fade="in">
+            <article class="article flex">
+                <div class="article__content">
+                    <h2>Finding the best car insurance company for you</h2>
+                    <p>Pricing and discounts made up a portion of each insurer’s score, but we know that cost is the top
+                        factor for many auto insurance shoppers. Since pricing is based on personal factors including
+                        your age, location, vehicle and credit history and gender (in most cases), it’s important to
+                        shop around for car insurance quotes.</p>
+                    <p>If price is the most important factor in your search, comparing car insurance quotes can help you
+                        find the cheapest rate. But your shopping experience will also shed light on a company’s
+                        customer service standards.</p>
+                </div>
+                <div class="article__content">
+                    <h3>To find the top car insurance companies:</h3>
+                    <ul>
+                        <li>1. Visit your state insurance commissioner’s website to find complaints and other
+                            information about companies in your area.</li>
+                        <li>2. Ask your agent or a customer service representative any questions you have to make sure
+                            you’re getting all the coverage you need — and nothing you don’t want.</li>
+                        <li>3. Consider smaller insurance companies, too. Small companies offer rates well below large
+                            competitors in many locations.</li>
+                        <li>4. If you’ve had tickets, DUIs or other violations, be sure to shop three and five years
+                            after the incident, when surcharges can drop significantly.</li>
+                    </ul>
+                </div>
+            </article>
+            <div class="showcase__image flex flex-ai-c flex-jc-c">
+                <div class="showcase-img">
+                    <a href="./assets/img/showcase-img-1.jpeg"><img src="./assets/img/showcase-img-1.jpeg"
+                            alt="Car Insurance"></a>
+                </div>
+                <div class="showcase-img">
+                    <a href="./assets/img/showcase-img-2.jpeg"><img class="showcase-img"
+                            src="./assets/img/showcase-img-2.jpeg" alt="Road Insurance"></a>
+                </div>
+                <div class="showcase-img">
+                    <a href="./assets/img/hero.jpeg"><img class="showcase-img" src="./assets/img/hero.jpeg"
+                            alt="Lamborghini"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promotion">
+        <div class="promotion__container container">
+            <h1 data-promotion-title data-slide="left">The Best Insurance Companies for 2021</h1>
+            <div class="text" data-promotion-good data-slide="right">
+                <p>you're in <span>good hands</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="company">
+        <div class="company__container container flex flex-ai-c" data-company data-fade="down">
+            <article class="company__article">
+                <h2>The Best Car Insurance Companies for 2021</h2>
+                <p class="underline">We looked at claims processes, transparency, complaints and more to find and rank
+                    the best car insurance companies.</p>
+                <p class="text-highlight">Many or all of the products featured here are from our partners who compensate
+                    us. This may influence which products we write about and where and how the product appears on a
+                    page. However, this does not influence our evaluations. Our opinions are our own.</p>
+                <p>The best car insurance companies give their customers more than just coverage they want at a
+                    reasonable price — merely good companies can do that. On top of that, the best auto insurance
+                    companies provide a customer-first experience from quote to claim, including a headache-free way to
+                    manage policies and make payments.</p>
+            </article>
+            <div class="company__image">
+                <img src="./assets/img/showcase-img-1.jpeg" alt="Car Insurance">
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="faq__container" data-faq data-fade="down">
+            <div class="faq__title">
+                <h2 class="text-center mb-3">Faq</h2>
+                <p class="text-center mb-5">Sample text. Click to select the text box. Click again or double click to
+                    start
+                    editing the text.</p>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button py-4 collapsed text-white" data-accordion-btn type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                            aria-controls="flush-collapseOne">
+                            What's included in the quoted daily rate?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                            body.</div>
+                    </div>
+                </div>
+                <div class="accordion-item mt-3">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button py-4 collapsed text-white" data-accordion-btn type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                            aria-controls="flush-collapseTwo">
+                            What is the rental's mileage plan?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                            body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                </div>
+                <div class="accordion-item  mt-3">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button py-4 collapsed text-white" data-accordion-btn type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            What are your extra insurance options?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                            body. Nothing more exciting happening here in terms of content, but just filling up the
+                            space to make it look, at least at first glance, a bit more representative of how this would
+                            look in a real-world application.</div>
+                    </div>
+                </div>
+                <div class="accordion-item mt-3">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button py-4 collapsed text-white" data-accordion-btn type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Do I need to return the rental with a full tank?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                            body. Nothing more exciting happening here in terms of content, but just filling up the
+                            space to make it look, at least at first glance, a bit more representative of how this would
+                            look in a real-world application.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="closing">
+        <div class="closing__container flex flex-ai-c flex-jc-sb">
+            <div class="closing__image" data-closing-image data-slide="left">
+                <img src="./assets/img/closing-car.jpeg" alt="Car Closing Logo">
+            </div>
+            <div class="closing__contents flex flex-fd-c" data-closing-contents data-slide="right">
+                <h3>Safe. Relaxing.<br></h3>
+                <h3>Good to ride in.<br></h3>
+                <h3>Subtly decorated.</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <div class="contact-form__container flex flex-ai-c flex-jc-sb" data-form data-fade="in">
+            <article class="contact-form__content">
+                <h3 class="mb-3">Ready to talk?</h3>
+                <h2 class="mb-3">Contact Us</h2>
+                <p>Massa tempor nec feugiat nisl pretium fusce id velit. Accumsan tortor posuere ac ut. Aenean pharetra
+                    magna ac placerat vestibulum lectus. Praesent semper feugiat nibh sed pulvinar. Lorem sed risus
+                    ultricies tristique. </p>
+                <p>Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Amet dictum sit amet justo donec enim
+                    diam vulputate. Ut morbi tincidunt augue interdum velit euismod in pellentesque. Volutpat lacus
+                    laoreet non curabitur.</p>
+            </article>
+            <form action="" class="contact-form__form" method="post">
+                <div class="inputs mb-3">
+                    <label for="name">
+                        <input type="text" class="py-3" name="name" id="name" placeholder="Enter your name..">
+                    </label>
+                </div>
+                <div class="inputs mb-3">
+                    <label for="email">
+                        <input type="email" class="py-3" name="email" id="email"
+                            placeholder="Enter a valid email address..">
+                    </label>
+                </div>
+                <div class="inputs mb-3">
+                    <label for="message">
+                        <textarea name="message" id="message" cols="30" rows="5"
+                            placeholder="Enter your message..."></textarea>
+                    </label>
+                </div>
+                <input type="submit" value="Submit" class="form-btn">
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__flex">
+                <div class="more-topics">
+                    <h2>More topics</h2>
+                    <div class="footer__line"></div>
+                    <ul>
+                        <li><a href="#">Innovation</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Exhibitions</a></li>
+                        <li><a href="#">Museum & History</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Driving Events</a></li>
+                        <li><a href="#">Mercedes me Portal</a></li>
+                    </ul>
+                </div>
+                <div class="shopping">
+                    <h2>Shopping</h2>
+                    <div class="footer__line"></div>
+                    <ul>
+                        <li><a href="#">Dealer Search</a></li>
+                        <li><a href="#">Toyota Accessories</a></li>
+                        <li><a href="#">Toyota Collection</a></li>
+                        <li><a href="#">Toyota me Connect Store</a></li>
+                        <li><a href="#">Service & Parts</a></li>
+                        <li><a href="#">Formula 1 Store</a></li>
+                        <li><a href="#">Toyota Classic Center</a></li>
+                    </ul>
+                </div>
+                <div class="all-about-cars">
+                    <h2>All about cars</h2>
+                    <div class="footer__line"></div>
+                    <ul>
+                        <li><a href="#">Model Overview</a></li>
+                        <li><a href="#">Configurator</a></li>
+                        <li><a href="#">Test Drive</a></li>
+                        <li><a href="#">Toyota-Maybach</a></li>
+                        <li><a href="#">Toyota me connect</a></li>
+                        <li><a href="#">Toyota Ex-Factory Driving Aids</a></li>
+                        <li><a href="#">WLTP</a></li>
+                        <li><a href="#">RDE</a></li>
+                        <li><a href="#">Semiconductors supply situation</a></li>
+                        <li><a href="#">Li-Ion UN38.3</a></li>
+                    </ul>
+                </div>
+                <div class="discover-more">
+                    <h2>Discover more</h2>
+                    <div class="footer__line"></div>
+                    <ul>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">heycar</a></li>
+                        <li><a href="#">SHARE NOW</a></li>
+                        <li><a href="#">Vulnerability Reporting Policy</a></li>
+                        <li><a href="#">Toyota Energy</a></li>
+                        <li><a href="#">Toyota Bank</a></li>
+                        <li><a href="#">Fleet Sales</a></li>
+                        <li><a href="#">Toyota Global Training</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__info">
+                <h2>Stay informed</h2>
+                <div class="footer__line"></div>
+                <div class="text-contents">
+                    <p>Follow us and use the following social media platforms to get in contact with us and to share
+                        your passion for the brand, products and services of Royals.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__line"></div>
+            <div class="footer__bottom">
+                <p class="footer-btm-text">Copyright © 2022 All rights reserved Terms of Use | Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
