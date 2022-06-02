@@ -166,11 +166,25 @@ a, a::before, a::after {
 @media (max-width: 575.98px) {
   .header__logo > img#header-img {
     height: 30px;
+    -o-object-fit: unset;
+       object-fit: unset;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__logo > img#header-img {
+    height: 20px;
   }
 }
 
 .header__logo > a > .header-logo-text {
   margin-left: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .header__logo > a > .header-logo-text {
+    margin-left: 0.5rem;
+  }
 }
 
 @media (max-width: 991.98px) {

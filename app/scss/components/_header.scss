@@ -43,12 +43,21 @@
 
             @include max-width(mobile) {
                 height: 30px;
+                object-fit: unset;
+            }
+
+            @media(max-width: 400px) {
+                height: 20px;
             }
         }
 
         >a {
             >.header-logo-text {
                 margin-left: 1rem;
+
+                @include max-width(mobile) {
+                    margin-left: 0.5rem;
+                }
             }
         }
     }
