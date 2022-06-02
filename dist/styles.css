@@ -823,8 +823,39 @@ a, a::before, a::after {
   }
 }
 
+@media (max-width: 767.98px) {
+  .hero__contents > h1.hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero__contents > h1.hero-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__contents > h1.hero-title {
+    font-size: 1.5rem;
+  }
+}
+
 .hero__contents > p.hero-text {
   margin-bottom: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .hero__contents > p.hero-text {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__contents > p.hero-text {
+    font-size: 0.65rem;
+  }
 }
 
 .insurance-investing {
@@ -977,9 +1008,11 @@ a, a::before, a::after {
   cursor: pointer;
 }
 
-.showcase__image > .showcase-img:hover {
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+@media (min-width: 992px) {
+  .showcase__image > .showcase-img:hover {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
 }
 
 @media (max-width: 991.98px) {
