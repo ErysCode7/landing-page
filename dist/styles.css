@@ -182,14 +182,16 @@ a, a::before, a::after {
     position: fixed;
     -webkit-transition: left 400ms ease;
     transition: left 400ms ease;
-    height: 100vh;
     top: 0;
     left: -100%;
     bottom: 0;
-    width: 50vw;
-    padding-top: 70px;
+    height: 100vh;
+    width: 100%;
     background-color: #000000;
-    opacity: 0.9;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    opacity: 1;
   }
   .header__navlink.show {
     left: 0;
@@ -197,51 +199,115 @@ a, a::before, a::after {
 }
 
 @media (max-width: 991.98px) {
-  .header__navlink > li {
-    margin-bottom: 1rem;
+  .header__navlink > .logo-container {
+    width: 100%;
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header__navlink > .logo-container > img {
+    width: 100px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header__navlink > .socials {
+    width: 100%;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header__navlink > .socials > img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__navlink > .socials > img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header__navlink > .links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
   }
 }
 
-.header__navlink > li > a.nav-link {
+@media (max-width: 991.98px) {
+  .header__navlink > .links > li {
+    margin-bottom: 1rem;
+    width: 100%;
+    border-bottom: 1px solid #f17c0e;
+  }
+}
+
+.header__navlink > .links > li > a.nav-link {
   padding: 0 1rem;
 }
 
 @media (max-width: 991.98px) {
-  .header__navlink > li > a.nav-link {
+  .header__navlink > .links > li > a.nav-link {
     display: block;
     text-align: center;
     padding: 1.25rem 0;
   }
 }
 
-.header__navlink > li > a.nav-link::after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-  background-color: #f17c0e;
-  -webkit-transition: -webkit-transform 300ms ease;
-  transition: -webkit-transform 300ms ease;
-  transition: transform 300ms ease;
-  transition: transform 300ms ease, -webkit-transform 300ms ease;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: center;
-          transform-origin: center;
+@media (min-width: 992px) {
+  .header__navlink > .links > li > a.nav-link::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    background-color: #f17c0e;
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  .header__navlink > .links > li > a.nav-link:hover::after {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .header__navlink > .links > li > a.nav-link:hover {
+    color: #f17c0e;
+  }
 }
 
-.header__navlink > li > a.nav-link:hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-}
-
-.header__navlink > li > a.nav-link:hover {
-  color: #f17c0e;
-}
-
-.header__navlink > li > a.nav-link.active {
+.header__navlink > .links > li > a.nav-link.active {
   color: #f17c0e;
 }
 
@@ -1027,6 +1093,12 @@ a, a::before, a::after {
 .faq {
   margin: 2rem 0;
   padding: 2rem 0;
+}
+
+@media (max-width: 991.98px) {
+  .faq {
+    margin-top: 5rem;
+  }
 }
 
 .faq__container {

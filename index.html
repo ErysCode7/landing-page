@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royals Insurance Company</title>
+    <title>Royals</title>
     <!--GOOGLE FONTS-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!--BOOTSTRAP -->
@@ -22,6 +22,8 @@
     <!--GSAP-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
     <!--JavaScript-->
+    <script src="./app/js/intersection-observer.js" defer></script>
+    <script src="./app/js/accordion.js" defer></script>
     <script type="module" src="./app/js/index.js" defer></script>
     <link rel="shortcut icon" href="./assets/img/royals.svg" type="image/x-icon">
 </head>
@@ -39,9 +41,22 @@
                     </a>
                 </div>
                 <ul class="header__navlink flex flex-ai-c" data-menu>
-                    <li><a href="" class="nav-link active">Home</a></li>
-                    <li><a href="" class="nav-link text-white">About</a></li>
-                    <li><a href="" class="nav-link text-white">Contact</a></li>
+                    <div class="logo-container flex flex-ai-c hide-for-laptops-mf">
+                        <img src="./assets/img/royals.svg" alt="Royals">
+                    </div>
+                    <div class="links flex flex-ai-c">
+                        <li><a href="#" class="nav-link active">Home</a></li>
+                        <li><a href="#" class="nav-link text-white">About</a></li>
+                        <li><a href="#" class="nav-link text-white">Contact</a></li>
+                    </div>
+
+                    <div class="socials flex flex-ai-c hide-for-laptops-mf">
+                        <img src="./assets/img/socials/facebook.svg" alt="Facebook">
+                        <img src="./assets/img/socials/twitter.svg" alt="Facebook">
+                        <img src="./assets/img/socials/instagram.svg" alt="Facebook">
+                        <img src="./assets/img/socials/youtube.svg" alt="Facebook">
+                        <img src="./assets/img/socials/google.svg" alt="Facebook">
+                    </div>
                 </ul>
                 <div class="header__hamburger not-active hide-for-laptops-mf" data-hamburger>
                     <span class="hamburger-span"></span>
@@ -77,19 +92,19 @@
                     <img src="./assets/img/people.svg" alt="People">
                     <h3>For you and your family</h3>
                     <p>We protect vehicles, property, pets and <br> events.</p>
-                    <a href=""><button type="button">Read more</button></a>
+                    <a href="#"><button type="button">Read more</button></a>
                 </div>
                 <div class="content">
                     <img src="./assets/img/business.svg" alt="Business">
                     <h3>For your business</h3>
                     <p>We protect businesses and employees, as well as company property and vehicles.</p>
-                    <a href=""><button type="button">Read more</button></a>
+                    <a href="#"><button type="button">Read more</button></a>
                 </div>
                 <div class="content">
                     <img src="./assets/img/bulb.svg" alt="Bulb">
                     <h3>For your future</h3>
                     <p>We protect investments, retirements and <br> financial dreams.</p>
-                    <a href=""><button type="button">Read more</button></a>
+                    <a href="#"><button type="button">Read more</button></a>
                 </div>
             </div>
         </div>

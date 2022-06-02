@@ -59,61 +59,119 @@
             flex-direction: column;
             position: fixed;
             transition: left 400ms ease;
-            height: 100vh;
             top: 0;
             left: -100%;
             bottom: 0;
-            width: 50vw;
-            padding-top: 70px;
+            height: 100vh;
+            width: 100%;
             background-color: #000000;
-            opacity: 0.9;
+            justify-content: space-between;
+            opacity: 1;
+
 
             &.show {
                 left: 0;
             }
         }
 
-        >li {
+        >.logo-container {
 
             @include max-width(laptop) {
-                margin-bottom: 1rem;
                 width: 100%;
+                padding: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
             }
 
-            >a.nav-link {
-                padding: 0 1rem;
+            >img {
 
                 @include max-width(laptop) {
-                    display: block;
-                    text-align: center;
-                    padding: 1.25rem 0;
-                }
-
-                &::after {
-                    content: "";
-                    height: 2px;
-                    width: 100%;
-                    margin: 0 auto;
-                    display: block;
-                    background-color: $color-orange;
-                    transition: transform 300ms ease;
-                    transform: scale(0, 1);
-                    transform-origin: center;
-                }
-
-                &:hover::after {
-                    transform: scale(1, 1);
-                }
-
-                &:hover {
-                    color: $color-orange;
-                }
-
-                &.active {
-                    color: $color-orange;
+                    width: 100px;
+                    object-fit: cover;
                 }
             }
         }
+
+        >.socials {
+
+            @include max-width(laptop) {
+                width: 100%;
+                padding: 1.25rem;
+            }
+
+            >img {
+
+                @include max-width(laptop) {
+                    flex: 1;
+                    width: 25px;
+                    height: 25px;
+                    cursor: pointer;
+                }
+
+                @media(max-width: 400px) {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        >.links {
+
+            @include max-width(laptop) {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            >li {
+
+                @include max-width(laptop) {
+                    margin-bottom: 1rem;
+                    width: 100%;
+                    border-bottom: 1px solid $color-orange;
+                }
+
+                >a.nav-link {
+                    padding: 0 1rem;
+
+                    @include max-width(laptop) {
+                        display: block;
+                        text-align: center;
+                        padding: 1.25rem 0;
+                    }
+
+                    @include min-width(laptop) {
+
+                        &::after {
+                            content: "";
+                            height: 2px;
+                            width: 100%;
+                            margin: 0 auto;
+                            display: block;
+                            background-color: $color-orange;
+                            transition: transform 300ms ease;
+                            transform: scale(0, 1);
+                            transform-origin: center;
+                        }
+
+                        &:hover::after {
+                            transform: scale(1, 1);
+                        }
+
+                        &:hover {
+                            color: $color-orange;
+                        }
+                    }
+
+                    &.active {
+                        color: $color-orange;
+                    }
+                }
+            }
+        }
+
+
     }
 
     &__hamburger {
