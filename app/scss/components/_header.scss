@@ -83,26 +83,6 @@
             }
         }
 
-        >.logo-container {
-
-            @include max-width(laptop) {
-                width: 100%;
-                padding: 2rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-
-            >img {
-
-                @include max-width(laptop) {
-                    width: 100px;
-                    object-fit: cover;
-                }
-            }
-        }
-
         >.socials {
 
             @include max-width(laptop) {
@@ -130,6 +110,8 @@
 
             @include max-width(laptop) {
                 flex-direction: column;
+                justify-content: center;
+                height: 100%;
                 width: 100%;
             }
 
@@ -138,7 +120,7 @@
                 @include max-width(laptop) {
                     margin-bottom: 1rem;
                     width: 100%;
-                    border-bottom: 1px solid $color-orange;
+
                 }
 
                 >a.nav-link {
