@@ -21,8 +21,10 @@ This is one of my https://www.freecodecamp.org/learn/responsive-web-design/respo
 
 ### Links
 
+<<<<<<< HEAD
+
 - Solution URL: [https://github.com/ErysCode7/royals-landing-page](https://github.com/ErysCode7/royals-landing-page)
-- Live Site URL: [https://eryscode7.github.io/royals-landing-page/](https://eryscode7.github.io/royals-landing-page/)
+- # Live Site URL: [https://eryscode7.github.io/royals-landing-page/](https://eryscode7.github.io/royals-landing-page/)
 
 ## My process
 
